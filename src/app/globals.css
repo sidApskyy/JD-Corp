@@ -692,6 +692,6 @@ main { padding-top: 88px; }
 
 /* Brand logo */
 .wordmark-logo { height: 78px; width: auto; display: block; margin-block: -8px; }
-.footer-logo-img { height: 72px; width: auto; display: block; margin-bottom: 18px; }
+.footer-logo-img { height: 110px; width: auto; display: block; margin-bottom: 20px; }
 
 @media (max-width: 800px) { .wordmark-logo { height: 58px; margin-block: -6px; } }
