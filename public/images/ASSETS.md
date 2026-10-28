@@ -42,4 +42,6 @@ All photographs were downloaded locally from Unsplash Images on 2026-10-27 at up
 
 | `golden-path.png` | Client-supplied asset (provided by user) | Values section backdrop | Golden path through misty mountains |
 
+| `logo.png` | Client-supplied asset (provided by user) | Header & footer brand mark | JD Corporation gold emblem |
+
 Next.js Image generates responsive derivatives from these local originals. Cropping is controlled via CSS `object-fit: cover`; check important crops after replacing an image.

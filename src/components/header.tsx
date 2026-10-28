@@ -52,7 +52,7 @@ export function Header() {
   return (
     <header className={`site-header ${floating && !shown ? "is-hidden" : ""}`}>
       <div className="header-inner">
-        <Link href="/" className="wordmark" aria-label="JD CORP home" onClick={() => setOpen(false)}><span>JD</span><span className="wordmark-divider" /><span>CORP</span></Link>
+        <Link href="/" className="wordmark" aria-label="JD CORP home" onClick={() => setOpen(false)}><img src="/images/logo.png" alt="JD CORP" className="wordmark-logo" /></Link>
         <nav className="desktop-nav" aria-label="Primary navigation">
           {navigation.slice(0, 3).map((item) => <Link key={item.href} href={item.href} className={pathname === item.href ? "active" : ""} onClick={() => setOpen(false)}>{item.label}</Link>)}
           <button ref={triggerRef} type="button" className={open ? "nav-explore active" : "nav-explore"} aria-expanded={open} aria-controls="navigation-canvas" onClick={() => setOpen(!open)}>Explore <span>{open ? "−" : "+"}</span></button>

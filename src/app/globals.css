@@ -689,3 +689,7 @@ main { padding-top: 88px; }
 /* Intro copy legibility over the glass layer */
 .intro-section > .intro-inner, .intro-section > div:not(.intro-glass) { position: relative; z-index: 1; }
 .intro-body > p, .intro-right p, .intro-section p.muted { color: #3f4440; }
+
+/* Brand logo */
+.wordmark-logo { height: 42px; width: auto; display: block; }
+.footer-logo-img { height: 48px; width: auto; display: block; margin-bottom: 18px; }
