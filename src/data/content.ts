@@ -56,9 +56,9 @@ export const serviceLenses = [
 ] as const;
 
 export const projects: Project[] = [
-  { slug: "study-in-form", title: "Study in Form", category: "Architecture", description: "An editorial exploration of structural rhythm and light. This is not a JD CORP project.", image: "/images/hero.jpg", imageAlt: "Sculptural white modernist building against the sky", status: "draft" },
-  { slug: "urban-perspective", title: "Urban Perspective", category: "Urbanism", description: "An illustrative look at density, material, and the contemporary city. This is not a JD CORP project.", image: "/images/tower.jpg", imageAlt: "Glass office towers seen from below", status: "draft" },
-  { slug: "inside-out", title: "Inside / Out", category: "Interiors", description: "A visual study of space and atmosphere. This is not a JD CORP project.", image: "/images/interior.jpg", imageAlt: "Bright contemporary workspace interior", status: "draft" },
+  { slug: "study-in-form", title: "Study in Form", category: "Architecture", description: "An editorial exploration of structural rhythm and light. This is not a JD CORP project.", image: "/images/hero.jpg", imageAlt: "Sculptural white modernist building against the sky", status: "published" },
+  { slug: "urban-perspective", title: "Urban Perspective", category: "Urbanism", description: "An illustrative look at density, material, and the contemporary city. This is not a JD CORP project.", image: "/images/tower.jpg", imageAlt: "Glass office towers seen from below", status: "published" },
+  { slug: "inside-out", title: "Inside / Out", category: "Interiors", description: "A visual study of space and atmosphere. This is not a JD CORP project.", image: "/images/interior.jpg", imageAlt: "Bright contemporary workspace interior", status: "published" },
 ];
 
 export const insights: Insight[] = [];
