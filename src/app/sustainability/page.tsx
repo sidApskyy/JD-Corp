@@ -1,0 +1,11 @@
+import type { Metadata } from "next";
+import Image from "next/image";
+import { PageHero, SectionIntro, TextLink } from "@/components/ui";
+
+export const metadata: Metadata = { title: "Responsibility", description: "JD CORP's developing framework for quality, responsible growth and long-term thinking.", alternates: { canonical: "/sustainability" } };
+export default function SustainabilityPage() {
+  return <><PageHero index="05" eyebrow="RESPONSIBILITY" title={<>Built around<br /><em>what matters.</em></>} intro="The choices we make today shape the possibilities of tomorrow. Responsibility belongs at the center of long-term thinking." image="/images/residence.jpg" imageAlt="Thoughtful contemporary space with natural light" />
+    <section className="section-pad container"><SectionIntro number="01" label="OUR FRAMEWORK" title={<>The long view<br /><em>is the responsible view.</em></>} description="Our formal commitments and measurable policies will be shared only after they have been verified and approved." /><div className="detail-columns"><div><span>01 / QUALITY</span><h3>Care in the details.</h3><p>Quality begins with considered choices and a commitment to doing things well.</p></div><div><span>02 / PEOPLE</span><h3>People at the center.</h3><p>Meaningful progress should consider the people affected by each decision.</p></div><div><span>03 / FUTURE</span><h3>Room for tomorrow.</h3><p>Long-term thinking invites us to consider lasting relevance and responsible growth.</p></div></div><div className="responsibility-note"><span className="eyebrow">A NOTE ON TRANSPARENCY</span><p>Environmental targets, safety policies, certifications and performance data have not been supplied. This page does not make claims about those areas. Verified information can be added when available.</p></div></section>
+    <div className="wide-image"><Image src="/images/city.jpg" alt="City buildings under an open sky" fill sizes="100vw" className="cover-image" /></div><section className="container section-pad compact-cta"><h2>Better questions lead<br />to <em>better outcomes.</em></h2><TextLink href="/contact">TALK TO US</TextLink></section>
+  </>;
+}
