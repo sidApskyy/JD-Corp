@@ -157,8 +157,8 @@ em { font-family: var(--font-serif), Georgia, serif; font-weight: 400; }
 .statement-section { background: var(--paper); border-bottom: 1px solid var(--line); }
 .statement-inner { min-height: 620px; padding-block: 100px 70px; display: flex; flex-direction: column; justify-content: space-between; }
 .statement-inner > .eyebrow { color: var(--accent-ink); }
-.statement-inner p { font-size: clamp(43px, 6vw, 98px); letter-spacing: -.07em; line-height: 1.1; font-weight: 500; margin: 0; }
-.statement-inner em { color: var(--accent-ink); }
+.statement-inner p { font-size: clamp(43px, 6vw, 98px); letter-spacing: -.07em; line-height: 1.1; font-weight: 500; margin: 0; color: #1a1a1a; text-shadow: 1px 1px 0 rgba(183,161,122,.28), 2px 2px 0 rgba(183,161,122,.25), 3px 3px 0 rgba(183,161,122,.22), 4px 4px 0 rgba(183,161,122,.19), 5px 5px 0 rgba(183,161,122,.16), 6px 6px 0 rgba(183,161,122,.13), 8px 8px 0 rgba(183,161,122,.10), 18px 18px 34px rgba(0,0,0,.18); }
+.statement-inner em { color: var(--champagne); font-style: normal; text-shadow: 1px 1px 0 rgba(112,89,54,.35), 2px 2px 0 rgba(112,89,54,.28), 3px 3px 0 rgba(112,89,54,.22), 4px 4px 0 rgba(112,89,54,.17), 5px 5px 0 rgba(112,89,54,.12), 8px 8px 26px rgba(183,161,122,.3); }
 .statement-coordinate { align-self: flex-end; color: var(--muted); font-size: 12px; font-weight: 700; letter-spacing: .08em; }
 .work-section { background: var(--deep); color: white; }
 .section-intro-light .section-kicker-line { background: #ffffff30; }
