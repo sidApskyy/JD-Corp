@@ -11,7 +11,7 @@ function StaticHero() {
     <div className="hero-static-copy">
       <span className="eyebrow">JD CORP / A DIVERSIFIED CORPORATE GROUP</span>
       <h1>Building with purpose. <em>Shaping</em> what comes next<span className="accent-dot">.</span></h1>
-      <p>We look at how infrastructure, energy, industry and places connect, and how better decisions can move each forward.</p>
+      <p>We look at how land, buildings, capital and trade connect, and how better decisions can move each forward.</p>
       <div className="hero-actions">
         <Link className="button-dark" href="/businesses">EXPLORE OUR SECTORS <ArrowUpRight size={17} /></Link>
         <Link className="button-line light" href="/contact">START A CONVERSATION <ArrowUpRight size={17} /></Link>
@@ -43,7 +43,7 @@ export function Hero() {
       </span>}
     >
       <div className="hero-expand-copy">
-        <p>We look at how infrastructure, energy, industry and places connect, and how better decisions can move each forward.</p>
+        <p>We look at how land, buildings, capital and trade connect, and how better decisions can move each forward.</p>
         <div className="hero-actions">
           <Link className="button-dark light" href="/businesses">EXPLORE OUR SECTORS <ArrowUpRight size={17} /></Link>
           <Link className="button-line light" href="/contact">START A CONVERSATION <ArrowUpRight size={17} /></Link>
