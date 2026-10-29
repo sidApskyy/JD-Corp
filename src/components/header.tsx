@@ -16,17 +16,7 @@ const explore = [
 
 export function Header() {
   const [open, setOpen] = useState(false);
-  const [shown, setShown] = useState(false);
   const pathname = usePathname();
-  const floating = pathname === "/";
-
-  useEffect(() => {
-    if (!floating) return;
-    const onScroll = () => setShown(window.scrollY > 60);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, [floating]);
   const panelRef = useRef<HTMLDivElement>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
   const mobileButtonRef = useRef<HTMLButtonElement>(null);
@@ -51,7 +41,7 @@ export function Header() {
   }, [open]);
 
   return (
-    <header className={`site-header ${floating && !shown ? "is-hidden" : ""}`}>
+    <header className="site-header">
       <div className="header-inner">
         <Link href="/" className="wordmark" aria-label="JD CORP home" onClick={() => setOpen(false)}><img src="/images/logo.png" alt="JD CORP" className="wordmark-logo" /></Link>
         <nav className="desktop-nav" aria-label="Primary navigation">
@@ -59,7 +49,7 @@ export function Header() {
           <button ref={triggerRef} type="button" className={open ? "nav-explore active" : "nav-explore"} aria-expanded={open} aria-controls="navigation-canvas" onClick={() => setOpen(!open)}>Explore <span>{open ? "−" : "+"}</span></button>
         </nav>
         <div className="header-actions">
-          <StarBorder as={Link} href="/contact" className="header-contact" onClick={() => setOpen(false)} color="#b7a17a" trailColor="#e8d8bd" duration={5} direction="counterclockwise" stars={2} trailLength={0.45} thickness={1.5} radius={6} glow={0.75} hover="reveal" sparkle={false} clickPulse theme="dark">Let&apos;s talk <ArrowUpRight size={15} strokeWidth={1.6} /></StarBorder>
+          <StarBorder as={Link} href="/contact" className="header-contact" onClick={() => setOpen(false)} color="#B8863B" trailColor="#E7C98A" duration={4} direction="clockwise" stars={1} trailLength={0.3} thickness={1} radius={12} glow={0.6} hover="lap" sparkle={false} clickPulse theme="dark" borderColor="rgba(184,134,59,.5)">LET&apos;S CONNECT <ArrowUpRight size={15} strokeWidth={1.6} /></StarBorder>
           <button ref={mobileButtonRef} className="menu-button" type="button" aria-expanded={open} aria-controls="navigation-canvas" aria-label={open ? "Close menu" : "Open menu"} onClick={() => setOpen(!open)}>{open ? <X size={24} /> : <Menu size={24} />}</button>
         </div>
       </div>
