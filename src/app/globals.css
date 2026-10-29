@@ -255,14 +255,15 @@ em { font-family: var(--font-serif), Georgia, serif; font-weight: 400; }
 .image-quote::after { content: ""; position: absolute; inset: 0; background: linear-gradient(transparent 15%, #000c); }
 .image-quote .container { position: relative; z-index: 1; padding-bottom: 70px; }
 .image-quote span { font-size: 12px; letter-spacing: .08em; font-weight: 700; }
-.image-quote blockquote { font-size: clamp(44px, 6.2vw, 100px); letter-spacing: -.065em; line-height: 1.05; font-weight: 500; margin: 25px 0 0; }
-.image-quote em { color: #e5cda4; }
+.image-quote blockquote { font-size: clamp(44px, 6.2vw, 100px); letter-spacing: -.065em; line-height: 1.05; font-weight: 500; margin: 25px 0 0; text-shadow: 1px 1px 0 rgba(0,0,0,.35), 2px 2px 0 rgba(0,0,0,.25), 3px 3px 0 rgba(0,0,0,.15), 8px 8px 30px rgba(0,0,0,.5); }
+.image-quote em { color: #e5cda4; text-shadow: 0 0 18px rgba(229,205,164,.35); }
+.image-quote .preview-notice { color: rgba(255,255,255,.9); border-left-color: #e5cda4; margin-top: 30px; max-width: 460px; }
 .detail-columns { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 60px; }
 .detail-columns > div { border-top: 1px solid var(--line); padding-top: 20px; }
 .detail-columns span, .service-rows span { color: var(--accent-ink); font-size: 12px; font-weight: 700; letter-spacing: .08em; }
 .detail-columns h3 { margin: 60px 0 14px; font-size: clamp(23px, 2.3vw, 34px); letter-spacing: -.05em; font-weight: 500; }
 .detail-columns p { color: var(--graphite); font-size: 15px; line-height: 1.7; max-width: 350px; }
-.page-end-link { border-top: 1px solid var(--line); padding-top: 25px; margin-top: 95px; text-align: right; }
+.page-end-link { border-top: 1px solid var(--line); padding-top: 25px; margin-top: 95px; display: flex; justify-content: flex-end; gap: 28px; flex-wrap: wrap; }
 .directory-heading { border-top: 1px solid var(--line); padding: 23px 0 60px; display: flex; align-items: start; justify-content: space-between; gap: 30px; }
 .directory-heading p { font-size: clamp(18px, 2.2vw, 31px); line-height: 1.35; letter-spacing: -.04em; max-width: 510px; margin: 0; }
 .focus-disclosure { padding: 18px 22px; border-left: 3px solid var(--accent-ink); background: var(--stone); font-size: 15px !important; line-height: 1.7 !important; }
