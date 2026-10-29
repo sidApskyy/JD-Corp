@@ -6,7 +6,6 @@ import { ScrollStory } from "@/components/scroll-story";
 import { SectionIntro, TextLink } from "@/components/ui";
 import FadeContent from "@/components/fade-content";
 import { SectorExplorer } from "@/components/sector-explorer";
-import { ProjectCard } from "@/components/project-card";
 import { GradientCarousel } from "@/components/gradient-carousel";
 import FluidGlass from "@/components/fluid-glass";
 import { SectorCarousel } from "@/components/sector-carousel";

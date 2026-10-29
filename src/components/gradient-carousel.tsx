@@ -17,11 +17,10 @@ export function GradientCarousel({ items }: { items: Item[] }) {
   }, [index, n]);
   const go = useCallback((d: number) => setIndex(i => Math.min(n - 1, Math.max(0, i + d))), [n]);
 
-  useEffect(() => {
-    const onKey = (e: KeyboardEvent) => { if (e.key === "ArrowLeft") go(-1); if (e.key === "ArrowRight") go(1); };
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [go]);
+  const onKeyDown = (e: { key: string; preventDefault(): void }) => {
+    if (e.key === "ArrowLeft") { e.preventDefault(); go(-1); }
+    if (e.key === "ArrowRight") { e.preventDefault(); go(1); }
+  };
 
   const onDown = (e: React.PointerEvent) => { drag.current = { active: true, x: e.clientX, moved: false }; };
   const onMove = (e: React.PointerEvent) => {
@@ -34,7 +33,7 @@ export function GradientCarousel({ items }: { items: Item[] }) {
     if (Math.abs(e.deltaX) > Math.abs(e.deltaY) * 1.5 && Math.abs(e.deltaX) > 20) go(e.deltaX > 0 ? 1 : -1);
   };
 
-  return <div className="grad-carousel" onPointerDown={onDown} onPointerMove={onMove} onPointerUp={end} onPointerCancel={end} onWheel={onWheel} onDragStart={e => e.preventDefault()} role="region" aria-label="Project carousel" tabIndex={0}>
+  return <div className="grad-carousel" onPointerDown={onDown} onPointerMove={onMove} onPointerUp={end} onPointerCancel={end} onWheel={onWheel} onKeyDown={onKeyDown} onDragStart={e => e.preventDefault()} role="region" aria-label="Project carousel" tabIndex={0}>
     <div className="grad-glow" aria-hidden="true" style={{ background: "radial-gradient(60% 60% at 50% 58%, rgba(212,175,110,.5) 0%, rgba(140,110,60,.28) 48%, transparent 74%)" }} />
     <div className="grad-stage">
       {items.map((it, i) => {
@@ -42,7 +41,7 @@ export function GradientCarousel({ items }: { items: Item[] }) {
         if (off > n / 2) off -= n;
         if (off < -n / 2) off += n;
         const a = Math.abs(off);
-        return <Link key={it.slug} href={`/projects/${it.slug}`} className="grad-card" onClick={e => { if (drag.current.moved) e.preventDefault(); }} style={{ transform: `translateX(${off * 72}%) rotateY(${off * -28}deg) translateZ(${-a * 200}px) scale(${1 - a * 0.15})`, zIndex: 10 - a, opacity: a > 2 ? 0 : 1, pointerEvents: a > 0 ? "auto" : "auto" }} aria-hidden={a > 2}>
+        return <Link key={it.slug} href={`/projects/${it.slug}`} className="grad-card" onClick={e => { if (drag.current.moved) e.preventDefault(); }} style={{ transform: `translateX(${off * 72}%) rotateY(${off * -28}deg) translateZ(${-a * 200}px) scale(${1 - a * 0.15})`, zIndex: 10 - a, opacity: a > 2 ? 0 : 1, pointerEvents: a > 0 ? "auto" : "auto" }} aria-hidden={a > 2} tabIndex={a > 0 ? -1 : undefined}>
           <img src={it.src} alt={it.alt} draggable={false} />
           <span className="grad-card-meta"><span>{it.title}</span><ArrowUpRight size={16} /></span>
         </Link>;

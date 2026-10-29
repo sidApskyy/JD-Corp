@@ -24,7 +24,7 @@ export function BusinessCard({ business, index = 0 }: { business: Business; inde
         shadow={0.5}
         gyroscope={false}
         intro={false}
-        backContent={<div className="tilt-back"><span className="tilt-back-index">JD / {business.index}</span><h3>{business.headline}</h3><p>{business.description}</p><Link href={`/businesses/${business.slug}`} className="tilt-back-link">EXPLORE SECTOR <ArrowUpRight size={16} /></Link></div>}
+        backContent={<div className="tilt-back"><span className="tilt-back-index">JD / {business.index}</span><h3>{business.headline}</h3><p>{business.description}</p><span className="tilt-back-services">{business.services.join("  /  ")}</span></div>}
       >
         <TiltedCardLayer depth={30}>
           <span className="tilt-index">JD / {business.index}</span>
