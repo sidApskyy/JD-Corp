@@ -653,3 +653,7 @@ main { padding-top: 88px; }
 @media (max-width: 800px) { .intro-glass { opacity: .22; } }
 
 .tilt-back-services { font-size: 12px; font-weight: 800; letter-spacing: .08em; color: var(--champagne); margin-top: 10px; }
+
+/* StarBorder header CTA */
+a.star-border.header-contact { padding: 12px 18px; font-size: 12px; font-weight: 800; letter-spacing: .08em; }
+a.star-border.header-contact:hover { color: var(--accent-ink); }

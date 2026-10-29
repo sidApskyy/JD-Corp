@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ArrowUpRight, Menu, X } from "lucide-react";
+import StarBorder from "@/components/star-border";
 import { navigation } from "@/data/site";
 
 const explore = [
@@ -58,7 +59,7 @@ export function Header() {
           <button ref={triggerRef} type="button" className={open ? "nav-explore active" : "nav-explore"} aria-expanded={open} aria-controls="navigation-canvas" onClick={() => setOpen(!open)}>Explore <span>{open ? "−" : "+"}</span></button>
         </nav>
         <div className="header-actions">
-          <Link className="header-contact" href="/contact" onClick={() => setOpen(false)}>Let&apos;s talk <ArrowUpRight size={15} strokeWidth={1.6} /></Link>
+          <StarBorder as={Link} href="/contact" className="header-contact" onClick={() => setOpen(false)} color="#b7a17a" radius={0} thickness={1} duration={5} glow={0.5} theme="light" backgroundColor="transparent" textColor="#242424" borderColor="rgba(36,36,36,.35)">Let&apos;s talk <ArrowUpRight size={15} strokeWidth={1.6} /></StarBorder>
           <button ref={mobileButtonRef} className="menu-button" type="button" aria-expanded={open} aria-controls="navigation-canvas" aria-label={open ? "Close menu" : "Open menu"} onClick={() => setOpen(!open)}>{open ? <X size={24} /> : <Menu size={24} />}</button>
         </div>
       </div>
