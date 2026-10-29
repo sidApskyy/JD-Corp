@@ -46,7 +46,7 @@ em { font-family: var(--font-serif), Georgia, serif; font-weight: 400; }
 .desktop-nav a:hover, .desktop-nav .active, .nav-explore:hover { color: var(--accent-ink); }
 .nav-explore span { font-size: 18px; font-weight: 400; margin-left: 8px; }
 .header-actions { display: flex; align-items: center; gap: 15px; }
-.header-contact { display: inline-flex; align-items: center; gap: 8px; padding: 0.875rem 1.5rem; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .04em; white-space: nowrap; }
+.header-contact { display: inline-flex; align-items: center; gap: 10px; padding: 1rem 1.75rem; font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: .05em; white-space: nowrap; }
 .header-contact:hover { color: #fff; }
 .menu-button { display: none; background: none; border: 0; padding: 5px; }
 .nav-canvas { position: absolute; top: 88px; left: 0; width: 100%; background: var(--deep); color: var(--paper); max-height: calc(100dvh - 88px); overflow-y: auto; opacity: 0; visibility: hidden; transform: translateY(-18px); transition: opacity .32s,transform .4s; box-shadow: 0 24px 50px #0002; }
