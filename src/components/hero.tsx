@@ -37,10 +37,13 @@ export function Hero() {
       smoothing={0.12}
       overlayScrim={0.68}
       scrollHint="SCROLL TO EXPLORE"
-      title={<span className="hero-expand-title-inner">
+      title={<>
+      <span className="hero-spotlight" aria-hidden="true" />
+      <span className="hero-expand-title-inner">
         <span className="hero-expand-eyebrow">JD CORP / A DIVERSIFIED CORPORATE GROUP</span>
         <span className="hero-expand-h1">Building with<br />purpose. <em>Shaping</em><br />what comes next<span className="accent-dot">.</span></span>
-      </span>}
+      </span>
+    </>}
     >
       <div className="hero-expand-copy">
         <p>We look at how land, buildings, capital and trade connect, and how better decisions can move each forward.</p>
