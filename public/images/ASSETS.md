@@ -43,6 +43,7 @@ All photographs were downloaded locally from Unsplash Images on 2026-10-27 at up
 | `golden-path.png` | Client-supplied asset (provided by user) | Values section backdrop | Golden path through misty mountains |
 
 | `logo.png` | Client-supplied asset (provided by user) | Header & footer brand mark | JD Corporation gold emblem |
+| `WhatsApp Image 2026-10-30 at 10.29.18 PM.jpeg` | Client-supplied asset (provided by user) | Source for the homepage walnut feature-wall hero | Walnut wall with JD CORP branding and polished stone floor |
 
 Next.js Image generates responsive derivatives from these local originals. Cropping is controlled via CSS `object-fit: cover`; check important crops after replacing an image.
 

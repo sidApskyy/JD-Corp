@@ -190,10 +190,11 @@ a.star-border.header-contact:hover { background: rgba(73,44,24,.8); color: var(-
   background: linear-gradient(90deg, var(--gold-brushed), var(--gold-light));
   box-shadow: 0 0 10px 2px #ce8c45, 0 0 32px 6px rgba(202,123,50,.45);
 }
-.scroll-expand__title {
+.hero-expand .scroll-expand__title {
+  align-items: flex-end;
   justify-content: flex-start;
   text-align: left;
-  padding-inline: var(--gutter);
+  padding: 0 var(--gutter) clamp(90px, 13vh, 155px);
   color: var(--ivory);
   text-shadow: 0 3px 26px rgba(10,5,3,.9);
 }
@@ -236,6 +237,12 @@ a.star-border.header-contact:hover { background: rgba(73,44,24,.8); color: var(-
 }
 .scroll-expand__frame::after { z-index: 3; }
 .scroll-expand__overlay { z-index: 2; }
+.hero-expand .scroll-expand__overlay {
+  align-items: flex-start;
+  justify-content: flex-end;
+  text-align: left;
+  padding: 0 var(--gutter) clamp(68px, 9vh, 118px);
+}
 .scroll-expand__scrim {
   background: linear-gradient(180deg, rgba(21,10,7,.32), rgba(18,10,8,.21) 35%, rgba(15,8,6,.88));
 }

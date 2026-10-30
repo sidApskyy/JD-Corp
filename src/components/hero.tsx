@@ -7,9 +7,9 @@ import ScrollExpand from "@/components/scroll-expand";
 
 function StaticHero() {
   return <section className="hero-static">
-    <img src="/images/hero-walnut.jpg" alt="Sculptural contemporary building with angled glass and metal facade" fetchPriority="high" />
+    <img src="/images/hero-walnut-wall.jpg" alt="Luxury walnut feature wall with illuminated JD CORP branding and polished stone floor" fetchPriority="high" />
     <div className="hero-static-copy">
-      <span className="eyebrow">JD CORPORATION / BUSINESS BEYOND BOUNDARIES</span>
+      <span className="eyebrow">A DIVERSIFIED CORPORATE GROUP</span>
       <h1>Building <em>What&apos;s Next.</em></h1>
       <p>At JD Corporation, we seek opportunities to bring ideas, capabilities, and people together to create lasting value.</p>
       <div className="hero-actions">
@@ -25,8 +25,8 @@ export function Hero() {
   if (reduce) return <StaticHero />;
   return <section className="hero-expand" aria-label="JD CORP introduction">
     <ScrollExpand
-      src="/images/hero-walnut.jpg"
-      alt="Sculptural contemporary building with angled glass and metal facade"
+      src="/images/hero-walnut-wall.jpg"
+      alt="Luxury walnut feature wall with illuminated JD CORP branding and polished stone floor"
       useWindowScroll
       startWidth={44}
       startHeight={58}
@@ -40,7 +40,7 @@ export function Hero() {
       title={<>
       <span className="hero-spotlight" aria-hidden="true" />
       <span className="hero-expand-title-inner">
-        <span className="hero-expand-eyebrow">JD CORPORATION / BUSINESS BEYOND BOUNDARIES</span>
+        <span className="hero-expand-eyebrow">A DIVERSIFIED CORPORATE GROUP</span>
         <h1 className="hero-expand-h1">Building<br /><em>What&apos;s Next.</em></h1>
       </span>
     </>}
