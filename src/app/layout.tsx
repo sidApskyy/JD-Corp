@@ -5,16 +5,17 @@ import { ScrollProgress } from "@/components/motion-ui";
 import { Footer } from "@/components/footer";
 import { site } from "@/data/site";
 import "./globals.css";
+import "./luxury-theme.css";
 
 const manrope = Manrope({ subsets: ["latin"], variable: "--font-sans", display: "swap" });
 const instrument = Instrument_Serif({ subsets: ["latin"], variable: "--font-serif", weight: "400", style: ["normal", "italic"], display: "swap" });
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
-  title: { default: "JD CORP — Building with purpose", template: "%s | JD CORP" },
+  title: { default: "JD CORP — Business Beyond Boundaries", template: "%s | JD CORP" },
   description: site.description,
   alternates: { canonical: "/" },
-  openGraph: { title: "JD CORP — Building with purpose", description: site.description, siteName: site.name, type: "website", images: ["/images/hero.jpg"] },
+  openGraph: { title: "JD CORP — Business Beyond Boundaries", description: site.description, siteName: site.name, type: "website", images: ["/images/hero-walnut.jpg"] },
   twitter: { card: "summary_large_image" },
 };
 

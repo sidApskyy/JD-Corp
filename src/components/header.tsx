@@ -49,7 +49,7 @@ export function Header() {
           <button ref={triggerRef} type="button" className={open ? "nav-explore active" : "nav-explore"} aria-expanded={open} aria-controls="navigation-canvas" onClick={() => setOpen(!open)}>Explore <span>{open ? "−" : "+"}</span></button>
         </nav>
         <div className="header-actions">
-          <StarBorder as={Link} href="/contact" className="header-contact" onClick={() => setOpen(false)} color="#B8863B" trailColor="#E7C98A" duration={4} direction="clockwise" stars={1} trailLength={0.3} thickness={1} radius={12} glow={0.6} hover="lap" sparkle={false} clickPulse theme="dark" borderColor="rgba(184,134,59,.5)">LET&apos;S CONNECT <ArrowUpRight size={15} strokeWidth={1.6} /></StarBorder>
+          <StarBorder as={Link} href="/contact" className="header-contact" onClick={() => setOpen(false)} color="#D7B574" trailColor="#E7C98A" duration={4} direction="clockwise" stars={1} trailLength={0.3} thickness={1} radius={2} glow={0.6} hover="lap" sparkle={false} clickPulse theme="dark" borderColor="rgba(215,181,116,.5)">LET&apos;S CONNECT <ArrowUpRight size={15} strokeWidth={1.6} /></StarBorder>
           <button ref={mobileButtonRef} className="menu-button" type="button" aria-expanded={open} aria-controls="navigation-canvas" aria-label={open ? "Close menu" : "Open menu"} onClick={() => setOpen(!open)}>{open ? <X size={24} /> : <Menu size={24} />}</button>
         </div>
       </div>

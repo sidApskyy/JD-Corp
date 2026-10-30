@@ -45,3 +45,7 @@ All photographs were downloaded locally from Unsplash Images on 2026-10-27 at up
 | `logo.png` | Client-supplied asset (provided by user) | Header & footer brand mark | JD Corporation gold emblem |
 
 Next.js Image generates responsive derivatives from these local originals. Cropping is controlled via CSS `object-fit: cover`; check important crops after replacing an image.
+
+## Walnut luxury derivatives
+
+Files ending in `-walnut.jpg` are locally generated art-directed versions of the corresponding originals. They preserve the source dimensions while applying a consistent warm walnut grade, reduced blue saturation, deeper shadows, gentle vignette, and subtle amber falloff. `hero-walnut.jpg` also includes a baked left-side scrim for headline readability. These are still illustrative editorial photographs, not JD CORP work or premises.

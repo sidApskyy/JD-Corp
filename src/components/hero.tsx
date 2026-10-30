@@ -7,14 +7,14 @@ import ScrollExpand from "@/components/scroll-expand";
 
 function StaticHero() {
   return <section className="hero-static">
-    <img src="/images/hero.jpg" alt="Sculptural contemporary building with angled glass and metal facade" fetchPriority="high" />
+    <img src="/images/hero-walnut.jpg" alt="Sculptural contemporary building with angled glass and metal facade" fetchPriority="high" />
     <div className="hero-static-copy">
-      <span className="eyebrow">JD CORP / A DIVERSIFIED CORPORATE GROUP</span>
-      <h1>Building with purpose. <em>Shaping</em> what comes next<span className="accent-dot">.</span></h1>
-      <p>We look at how land, buildings, capital and trade connect, and how better decisions can move each forward.</p>
+      <span className="eyebrow">JD CORPORATION / BUSINESS BEYOND BOUNDARIES</span>
+      <h1>Building <em>What&apos;s Next.</em></h1>
+      <p>At JD Corporation, we seek opportunities to bring ideas, capabilities, and people together to create lasting value.</p>
       <div className="hero-actions">
-        <Link className="button-dark" href="/businesses">EXPLORE OUR SECTORS <ArrowUpRight size={17} /></Link>
-        <Link className="button-line light" href="/contact">START A CONVERSATION <ArrowUpRight size={17} /></Link>
+        <Link className="button-dark" href="/businesses">EXPLORE OUR BUSINESSES <ArrowUpRight size={17} /></Link>
+        <Link className="button-line light" href="/contact">LET&apos;S CONNECT <ArrowUpRight size={17} /></Link>
       </div>
     </div>
   </section>;
@@ -25,7 +25,7 @@ export function Hero() {
   if (reduce) return <StaticHero />;
   return <section className="hero-expand" aria-label="JD CORP introduction">
     <ScrollExpand
-      src="/images/hero.jpg"
+      src="/images/hero-walnut.jpg"
       alt="Sculptural contemporary building with angled glass and metal facade"
       useWindowScroll
       startWidth={44}
@@ -40,16 +40,16 @@ export function Hero() {
       title={<>
       <span className="hero-spotlight" aria-hidden="true" />
       <span className="hero-expand-title-inner">
-        <span className="hero-expand-eyebrow">JD CORP / A DIVERSIFIED CORPORATE GROUP</span>
-        <span className="hero-expand-h1">Building with<br />purpose. <em>Shaping</em><br />what comes next<span className="accent-dot">.</span></span>
+        <span className="hero-expand-eyebrow">JD CORPORATION / BUSINESS BEYOND BOUNDARIES</span>
+        <h1 className="hero-expand-h1">Building<br /><em>What&apos;s Next.</em></h1>
       </span>
     </>}
     >
       <div className="hero-expand-copy">
-        <p>We look at how land, buildings, capital and trade connect, and how better decisions can move each forward.</p>
+        <p>At JD Corporation, we seek opportunities to bring ideas, capabilities, and people together to create lasting value.</p>
         <div className="hero-actions">
-          <Link className="button-dark light" href="/businesses">EXPLORE OUR SECTORS <ArrowUpRight size={17} /></Link>
-          <Link className="button-line light" href="/contact">START A CONVERSATION <ArrowUpRight size={17} /></Link>
+          <Link className="button-dark light" href="/businesses">EXPLORE OUR BUSINESSES <ArrowUpRight size={17} /></Link>
+          <Link className="button-line light" href="/contact">LET&apos;S CONNECT <ArrowUpRight size={17} /></Link>
         </div>
         <span className="hero-expand-fig">FIG. 001 - ARCHITECTURE AS POSSIBILITY</span>
       </div>

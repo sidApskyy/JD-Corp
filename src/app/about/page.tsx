@@ -10,7 +10,7 @@ const groups = [...new Set(businesses.map(b => b.group))].map(g => g.toLowerCase
 export const metadata: Metadata = { title: "About JD CORP", description: `A corporate group working across ${businesses.length} fields: ${fieldList}.`, alternates: { canonical: "/about" } };
 export default function AboutPage() {
   return <>
-    <PageHero eyebrow="ABOUT US" title={<>A clear vision.<br /><em>A long-term perspective.</em></>} intro="We believe meaningful progress begins with a broader view: one that brings purpose, possibility and practical thinking together." image="/images/tower.jpg" imageAlt="Modern towers rising into a clear sky" />
+    <PageHero eyebrow="ABOUT US" title={<>A clear vision.<br /><em>A long-term perspective.</em></>} intro="We believe meaningful progress begins with a broader view: one that brings purpose, possibility and practical thinking together." image="/images/tower-walnut.jpg" imageAlt="Modern towers rising into a clear sky" />
     <section className="content-section section-pad container">
       <Reveal>
         <div className="content-split">
@@ -24,7 +24,7 @@ export default function AboutPage() {
       </Reveal>
     </section>
     <section className="image-quote">
-      <Image src="/images/structure.jpg" alt="Curving modern building forms framing the sky" fill sizes="100vw" className="cover-image" />
+      <Image src="/images/structure-walnut.jpg" alt="Curving modern building forms framing the sky" fill sizes="100vw" className="cover-image" />
       <div className="container">
         <Reveal>
           <span>01 / PURPOSE</span>
