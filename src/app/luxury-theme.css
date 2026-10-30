@@ -1,15 +1,15 @@
 /* Material system: irregular timber boards, grain and concealed warm light. */
 :root {
-  --paper: #f3eee5;
-  --white: #faf7f0;
-  --ink: #24160f;
-  --deep: #1b1b19;
-  --graphite: #57483d;
-  --muted: #655446;
-  --line: #d0bfab;
-  --champagne: #cba56a;
-  --accent-ink: #795222;
-  --stone: #e9dfd2;
+  --paper: #f0e7d8;
+  --white: #faf5ec;
+  --ink: #1e1009;
+  --deep: #140c08;
+  --graphite: #6b4b36;
+  --muted: #7d6148;
+  --line: #c8a77c;
+  --champagne: #d6aa61;
+  --accent-ink: #8a5a24;
+  --stone: #e9dcc9;
   --metal-line: rgba(215, 181, 116, .34);
   --metal-bright: #e7c98a;
   --wood-panel: linear-gradient(90deg,

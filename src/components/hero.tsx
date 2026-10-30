@@ -7,7 +7,7 @@ import ScrollExpand from "@/components/scroll-expand";
 
 function StaticHero() {
   return <section className="hero-static">
-    <img src="/images/hero-walnut-wall.jpg" alt="Luxury walnut feature wall with illuminated JD CORP branding and polished stone floor" fetchPriority="high" />
+    <img src="/images/office-hero.jpg" alt="JD CORP executive office with illuminated walnut shelving, world map feature panel and polished wood desk" fetchPriority="high" />
     <div className="hero-static-copy">
       <span className="eyebrow">A DIVERSIFIED CORPORATE GROUP</span>
       <h1>Building <em>What&apos;s Next.</em></h1>
@@ -25,8 +25,8 @@ export function Hero() {
   if (reduce) return <StaticHero />;
   return <section className="hero-expand" aria-label="JD CORP introduction">
     <ScrollExpand
-      src="/images/hero-walnut-wall.jpg"
-      alt="Luxury walnut feature wall with illuminated JD CORP branding and polished stone floor"
+      src="/images/office-hero.jpg"
+      alt="JD CORP executive office with illuminated walnut shelving, world map feature panel and polished wood desk"
       useWindowScroll
       startWidth={44}
       startHeight={58}

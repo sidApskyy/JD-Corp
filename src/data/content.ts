@@ -56,9 +56,9 @@ export const serviceLenses = [
 ] as const;
 
 export const projects: Project[] = [
-  { slug: "study-in-form", title: "Study in Form", category: "Architecture", description: "An editorial exploration of structural rhythm and light. This is not a JD CORP project.", image: "/images/hero-walnut.jpg", imageAlt: "Sculptural white modernist building against the sky", status: "published" },
-  { slug: "urban-perspective", title: "Urban Perspective", category: "Urbanism", description: "An illustrative look at density, material, and the contemporary city. This is not a JD CORP project.", image: "/images/tower-walnut.jpg", imageAlt: "Glass office towers seen from below", status: "published" },
-  { slug: "inside-out", title: "Inside / Out", category: "Interiors", description: "A visual study of space and atmosphere. This is not a JD CORP project.", image: "/images/interior-walnut.jpg", imageAlt: "Bright contemporary workspace interior", status: "published" },
+  { slug: "study-in-form", title: "Study in Form", category: "Architecture", description: "An editorial exploration of material rhythm, mapping and light. This is not a JD CORP project.", image: "/images/office-map-detail.jpg", imageAlt: "Illuminated world-map feature panel in the JD CORP office", status: "published" },
+  { slug: "urban-perspective", title: "Urban Perspective", category: "Urbanism", description: "An illustrative look at material, order, and collected perspective. This is not a JD CORP project.", image: "/images/office-shelf-detail.jpg", imageAlt: "Illuminated walnut office shelving with books and objects", status: "published" },
+  { slug: "inside-out", title: "Inside / Out", category: "Interiors", description: "A visual study of executive space, material and atmosphere. This is not a JD CORP project.", image: "/images/office-desk-detail.jpg", imageAlt: "Polished executive desk and leather chair in the JD CORP office", status: "published" },
 ];
 
 export const insights: Insight[] = [];

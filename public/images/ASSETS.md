@@ -44,6 +44,7 @@ All photographs were downloaded locally from Unsplash Images on 2026-10-27 at up
 
 | `logo.png` | Client-supplied asset (provided by user) | Header & footer brand mark | JD Corporation gold emblem |
 | `WhatsApp Image 2026-10-30 at 10.29.18 PM.jpeg` | Client-supplied asset (provided by user) | Source for the homepage walnut feature-wall hero | Walnut wall with JD CORP branding and polished stone floor |
+| `WhatsApp Image 2026-10-30 at 10.29.18 PM (1).jpeg` | Client-supplied JD CORP office photograph | Source for the executive-office visual system | Walnut shelving, illuminated map wall, leather chair and polished desk |
 
 Next.js Image generates responsive derivatives from these local originals. Cropping is controlled via CSS `object-fit: cover`; check important crops after replacing an image.
 
@@ -53,4 +54,8 @@ Files ending in `-walnut.jpg` are locally generated art-directed versions of the
 
 ## Generated luxury material library
 
-The `material-*.jpg` files are locally generated decorative surfaces for section backgrounds and page-hero image strips. They provide varied broad walnut panels, ribbed timber, concealed amber light seams, dark stone, and ivory stone. They are abstract brand materials, not photographs of JD CORP offices, projects, or property.
+The `material-*.jpg` files are locally generated decorative surfaces retained as unused fallback assets. They provide broad walnut panels, ribbed timber, concealed amber light seams, dark stone, and ivory stone. They are abstract brand materials, not photographs of JD CORP offices, projects, or property.
+
+## Executive office derivatives
+
+The `office-*.jpg` files are locally generated crops and grades from the client-supplied JD CORP office photograph. They provide the homepage hero, illuminated world-map detail, symmetrical walnut shelving, executive desk detail, chandelier detail, and a blurred espresso texture for dark sections. These assets represent the supplied office environment and should not be replaced with stock imagery without confirmation.
