@@ -114,7 +114,7 @@ a.star-border.header-contact:hover { background: rgba(73,44,24,.8); color: var(-
   color: var(--ivory);
   border-color: var(--metal-line);
 }
-.statement-bg-img { opacity: .24; filter: sepia(.6) contrast(1.15); }
+.statement-bg-img { object-fit: cover; object-position: center; opacity: .42; filter: contrast(1.08) saturate(1.08); }
 .statement-inner p {
   color: var(--ivory);
   text-shadow: 0 2px 2px rgba(0,0,0,.5), 0 15px 32px rgba(0,0,0,.5);
@@ -128,13 +128,14 @@ a.star-border.header-contact:hover { background: rgba(73,44,24,.8); color: var(-
 }
 .gallery-section .section-intro em, .work-section .section-intro em { color: var(--gold-light); }
 .work-section { background: #1b1b19; color: var(--ivory); border-top: 1px solid var(--metal-line); }
-.work-bg-img { opacity: .35; }
+.work-bg-img { opacity: .58; }
 .section-intro-light .section-intro-content > p, .dark-notice, .dark-end > span { color: var(--text-body); }
 .grad-card { border: 1px solid var(--metal-line); border-radius: 3px; }
 .approach-section {
   background: linear-gradient(120deg, rgba(215,181,116,.07), transparent 65%), var(--paper);
 }
-.approach-bg-img { filter: sepia(.32); }
+.approach-bg-img { object-fit: cover; opacity: .28; filter: none; }
+.values-bg-img { opacity: .48; }
 .values-section {
   background: linear-gradient(100deg, rgba(20,11,8,.9), rgba(42,24,15,.85)), var(--wood-panel);
   color: var(--ivory);

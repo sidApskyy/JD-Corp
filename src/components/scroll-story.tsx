@@ -12,7 +12,7 @@ export function ScrollStory() {
   const scale = useTransform(scrollYProgress, [0, .5, 1], [1.12, 1, 1.08]);
   return <div className="story-image" ref={ref}>
     <motion.div className="story-image-inner" style={reduce ? undefined : { y, scale }}>
-      <Image src="/images/structure-walnut.jpg" alt="Curving modern building forms framing the sky" fill sizes="100vw" className="cover-image" />
+      <Image src="/images/material-architecture.jpg" alt="Walnut architectural wall transitioning into dark polished stone" fill sizes="100vw" className="cover-image" />
     </motion.div>
     <div className="story-live" aria-hidden="true" /><div className="story-image-overlay"><span>01 — THE LONG VIEW</span><span>SPACE TO THINK BIGGER</span></div>
     <div className="story-image-mark" aria-hidden="true">+</div>

@@ -49,3 +49,7 @@ Next.js Image generates responsive derivatives from these local originals. Cropp
 ## Walnut luxury derivatives
 
 Files ending in `-walnut.jpg` are locally generated art-directed versions of the corresponding originals. They preserve the source dimensions while applying a consistent warm walnut grade, reduced blue saturation, deeper shadows, gentle vignette, and subtle amber falloff. `hero-walnut.jpg` also includes a baked left-side scrim for headline readability. These are still illustrative editorial photographs, not JD CORP work or premises.
+
+## Generated luxury material library
+
+The `material-*.jpg` files are locally generated decorative surfaces for section backgrounds and page-hero image strips. They provide varied broad walnut panels, ribbed timber, concealed amber light seams, dark stone, and ivory stone. They are abstract brand materials, not photographs of JD CORP offices, projects, or property.
