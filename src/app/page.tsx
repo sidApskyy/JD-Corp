@@ -16,6 +16,7 @@ export default function Home() {
     <Hero />
     <div className="pair-stack">
     <section className="intro-section section-pad container">
+      <div className="intro-bg" aria-hidden="true"><Image src="/images/Cityscape on Walnut Grain.png" alt="" fill sizes="(max-width: 800px) 100vw, 90vw" className="intro-bg-img" /></div>
       <div className="intro-marker"><span className="eyebrow">01 / OUR PERSPECTIVE</span><span className="thin-cross">+</span></div>
       <FadeContent className="intro-body" effect="mist" duration={1.8} ease="power2.out" stagger={0.25} threshold={0.15}><h2>Many disciplines.<br /><em>One wider view.</em></h2><div className="intro-support"><p>Land, buildings, capital and trade do not exist in isolation. JD CORP looks at how connected thinking can shape better possibilities across the built world.</p><TextLink href="/about">DISCOVER OUR PERSPECTIVE</TextLink></div></FadeContent>
       <div className="intro-rule"><span>PLACES</span><span>SYSTEMS</span><span>PROGRESS</span></div>

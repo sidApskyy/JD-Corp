@@ -46,6 +46,7 @@ All photographs were downloaded locally from Unsplash Images on 2026-10-27 at up
 | `WhatsApp Image 2026-10-30 at 10.29.18 PM.jpeg` | Client-supplied asset (provided by user) | Homepage static hero and social preview | Walnut wall with JD CORP branding and polished stone floor |
 | `WhatsApp Image 2026-10-30 at 10.29.18 PM (1).jpeg` | Client-supplied JD CORP office photograph | Homepage scroll-story image and source for office derivatives | Walnut shelving, illuminated map wall, leather chair and polished desk |
 | `Golden  Waterfront Skyline.png` | User-supplied illustrative artwork | Homepage Perspectives & Progress section background | Gold architectural skyline drawing; not a verified JD CORP project |
+| `Cityscape on Walnut Grain.png` | User-supplied illustrative artwork | Homepage Our Perspective section background | Architectural cityscape on walnut panels; not a verified JD CORP project |
 
 Next.js Image generates responsive derivatives from these local originals. Cropping is controlled via CSS `object-fit: cover`; check important crops after replacing an image.
 

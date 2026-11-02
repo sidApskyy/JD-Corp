@@ -18,7 +18,7 @@ export function Hero() {
       <p>At JD Corporation, we seek opportunities to bring ideas, capabilities, and people together to create lasting value.</p>
       <div className="hero-actions">
         <Link className="button-dark" href="/businesses">EXPLORE OUR BUSINESSES <ArrowUpRight size={17} /></Link>
-        <Link className="button-line light" href="/contact">LET&apos;S CONNECT <ArrowUpRight size={17} /></Link>
+        <Link className="button-line light hero-secondary" href="/contact">LET&apos;S CONNECT <ArrowUpRight size={17} /></Link>
       </div>
       <span className="hero-static-fig">FIG. 001 - ARCHITECTURE AS POSSIBILITY</span>
     </div>

@@ -509,14 +509,14 @@ em { font-family: var(--font-serif), Georgia, serif; font-weight: 400; }
 .button-dark.light:hover { background: var(--champagne); border-color: var(--champagne); }
 .button-line.light { border-color: rgba(255,255,255,.65); color: #fff; }
 .button-line.light:hover { border-color: #fff; }
-.hero-static { position: relative; min-height: max(720px, 100svh); display: flex; align-items: flex-end; background: var(--deep); overflow: hidden; }
+.hero-static { position: relative; min-height: max(720px, 100svh); display: flex; align-items: flex-end; justify-content: flex-end; background: var(--deep); overflow: hidden; }
 .hero-static-image { object-fit: cover; object-position: center; }
 .hero-static::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(0deg, rgba(0,0,0,.78), rgba(0,0,0,.35) 33%, transparent 65%); }
-.hero-static-copy { position: relative; z-index: 1; color: #fff; padding: 130px var(--gutter) 66px; max-width: 760px; }
+.hero-static-copy { position: relative; z-index: 1; color: #fff; width: min(460px, 40vw); padding: 0 var(--gutter) 30px 0; }
 .hero-static-copy .eyebrow { color: #e6dfc9; }
-.hero-static-copy h1 { font-size: clamp(50px, 6.2vw, 94px); font-weight: 500; letter-spacing: -.07em; line-height: 1.02; margin: 22px 0; }
-.hero-static-copy p { font-size: clamp(16px, 1.4vw, 19px); line-height: 1.65; max-width: 520px; margin: 0 0 28px; color: #e8e9e4; }
-.hero-static-fig { display: block; margin-top: 35px; font-size: 11px; font-weight: 700; letter-spacing: .16em; color: var(--gold-light); }
+.hero-static-copy h1 { font-size: clamp(52px, 5.2vw, 76px); font-weight: 500; letter-spacing: -.07em; line-height: 1.02; margin: 12px 0 14px; }
+.hero-static-copy p { font-size: clamp(16px, 1.4vw, 19px); line-height: 1.65; max-width: 520px; margin: 0 0 18px; color: #e8e9e4; }
+.hero-static-fig { display: block; margin-top: 22px; font-size: 11px; font-weight: 700; letter-spacing: .16em; color: var(--gold-light); }
 
 /* Flex-carousel gallery section */
 .gallery-section { background: var(--deep); color: #f2f2ee; padding-block: clamp(90px, 9vw, 150px) clamp(80px, 8vw, 130px); }
