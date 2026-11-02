@@ -43,19 +43,24 @@ All photographs were downloaded locally from Unsplash Images on 2026-10-27 at up
 | `golden-path.png` | Client-supplied asset (provided by user) | Values section backdrop | Golden path through misty mountains |
 
 | `logo.png` | Client-supplied asset (provided by user) | Header & footer brand mark | JD Corporation gold emblem |
-| `WhatsApp Image 2026-10-30 at 10.29.18 PM.jpeg` | Client-supplied asset (provided by user) | Source for the homepage walnut feature-wall hero | Walnut wall with JD CORP branding and polished stone floor |
-| `WhatsApp Image 2026-10-30 at 10.29.18 PM (1).jpeg` | Client-supplied JD CORP office photograph | Source for the executive-office visual system | Walnut shelving, illuminated map wall, leather chair and polished desk |
+| `WhatsApp Image 2026-10-30 at 10.29.18 PM.jpeg` | Client-supplied asset (provided by user) | Homepage static hero and social preview | Walnut wall with JD CORP branding and polished stone floor |
+| `WhatsApp Image 2026-10-30 at 10.29.18 PM (1).jpeg` | Client-supplied JD CORP office photograph | Homepage scroll-story image and source for office derivatives | Walnut shelving, illuminated map wall, leather chair and polished desk |
+| `Golden  Waterfront Skyline.png` | User-supplied illustrative artwork | Homepage Perspectives & Progress section background | Gold architectural skyline drawing; not a verified JD CORP project |
 
 Next.js Image generates responsive derivatives from these local originals. Cropping is controlled via CSS `object-fit: cover`; check important crops after replacing an image.
 
 ## Walnut luxury derivatives
 
-Files ending in `-walnut.jpg` are locally generated art-directed versions of the corresponding originals. They preserve the source dimensions while applying a consistent warm walnut grade, reduced blue saturation, deeper shadows, gentle vignette, and subtle amber falloff. `hero-walnut.jpg` also includes a baked left-side scrim for headline readability. These are still illustrative editorial photographs, not JD CORP work or premises.
+Files ending in `-walnut.jpg` are archived art-directed versions of the corresponding originals. They have a baked warm grade, reduced blue saturation, deeper shadows and amber falloff; `hero-walnut.jpg` also has a baked scrim. The active sector, gallery and editorial photos now use the ungraded originals instead. All stock photos remain illustrative, not JD CORP work or premises.
 
 ## Generated luxury material library
 
-The `material-*.jpg` files are locally generated decorative surfaces retained as unused fallback assets. They provide broad walnut panels, ribbed timber, concealed amber light seams, dark stone, and ivory stone. They are abstract brand materials, not photographs of JD CORP offices, projects, or property.
+The `material-*.jpg` files are locally generated decorative surfaces used across page-hero strips, feature sections and homepage backdrops. They provide broad walnut panels, ribbed timber, concealed amber light seams, dark stone, and ivory stone. They are abstract brand materials, not photographs of JD CORP offices, projects, or property.
+
+## Original material compositions
+
+`composition-walnut-portal.jpg`, `composition-brass-inlay.jpg` and `composition-ivory-joinery.jpg` are original, locally rendered conceptual images. They combine the generated material surfaces into distinct walnut/stone/brass architectural studies. They are not photographs of JD CORP locations or completed work. Regenerate with `python scripts/generate-luxury-compositions.py` (Pillow and NumPy required); no network access or licensed third-party imagery is used for these compositions.
 
 ## Executive office derivatives
 
-The `office-*.jpg` files are locally generated crops and grades from the client-supplied JD CORP office photograph. They provide the homepage hero, illuminated world-map detail, symmetrical walnut shelving, executive desk detail, chandelier detail, and a blurred espresso texture for dark sections. These assets represent the supplied office environment and should not be replaced with stock imagery without confirmation.
+The `office-*.jpg` files are locally generated crops and grades from the client-supplied JD CORP office photograph. The office shelving detail remains on the About page; the other crops are retained as source derivatives but no longer repeated across the site. The homepage hero instead uses the separate client-supplied feature-wall photograph.

@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   title: { default: "JD CORP — Business Beyond Boundaries", template: "%s | JD CORP" },
   description: site.description,
   alternates: { canonical: "/" },
-  openGraph: { title: "JD CORP — Business Beyond Boundaries", description: site.description, siteName: site.name, type: "website", images: ["/images/office-hero.jpg"] },
+  openGraph: { title: "JD CORP — Business Beyond Boundaries", description: site.description, siteName: site.name, type: "website", images: ["/images/WhatsApp Image 2026-10-30 at 10.29.18 PM.jpeg"] },
   twitter: { card: "summary_large_image" },
 };
 

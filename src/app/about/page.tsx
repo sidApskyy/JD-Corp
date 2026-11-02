@@ -10,7 +10,7 @@ const groups = [...new Set(businesses.map(b => b.group))].map(g => g.toLowerCase
 export const metadata: Metadata = { title: "About JD CORP", description: `A corporate group working across ${businesses.length} fields: ${fieldList}.`, alternates: { canonical: "/about" } };
 export default function AboutPage() {
   return <>
-    <PageHero eyebrow="ABOUT US" title={<>A clear vision.<br /><em>A long-term perspective.</em></>} intro="We believe meaningful progress begins with a broader view: one that brings purpose, possibility and practical thinking together." image="/images/office-map-detail.jpg" imageAlt="Illuminated world-map feature panel in the JD CORP executive office" />
+    <PageHero eyebrow="ABOUT US" title={<>A clear vision.<br /><em>A long-term perspective.</em></>} intro="We believe meaningful progress begins with a broader view: one that brings purpose, possibility and practical thinking together." image="/images/office-shelf-detail.jpg" imageAlt="Walnut shelving and warm integrated lighting in the JD CORP office" />
     <section className="content-section section-pad container">
       <Reveal>
         <div className="content-split">
@@ -24,12 +24,12 @@ export default function AboutPage() {
       </Reveal>
     </section>
     <section className="image-quote">
-      <Image src="/images/office-desk-detail.jpg" alt="Polished executive desk and leather chair in the JD CORP office" fill sizes="100vw" className="cover-image" />
+      <Image src="/images/composition-walnut-portal.jpg" alt="Conceptual stone portal framed by ribbed walnut and brass light" fill sizes="100vw" className="cover-image" />
       <div className="container">
         <Reveal>
           <span>01 / PURPOSE</span>
           <blockquote>To build with intention,<br />and think beyond <em>today.</em></blockquote>
-          <p className="preview-notice">This image is illustrative and does not represent a specific JD CORP project or location.</p>
+          <p className="preview-notice">This is a conceptual material study, not a JD CORP project or location.</p>
         </Reveal>
       </div>
     </section>
