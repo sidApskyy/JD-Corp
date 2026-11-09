@@ -1,10 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowDown, ArrowUpRight } from "lucide-react";
-import { Reveal } from "@/components/motion-ui";
 
 export function SectionIntro({ number, label, title, description, light = false }: { number: string; label: string; title: React.ReactNode; description?: string; light?: boolean }) {
-  return <Reveal className={`section-intro ${light ? "section-intro-light" : ""}`}><div className="section-kicker"><span>{number} / {label}</span><span className="section-kicker-line" /></div><div className="section-intro-content"><h2>{title}</h2>{description && <p>{description}</p>}</div></Reveal>;
+  return <div className={`section-intro ${light ? "section-intro-light" : ""}`}><div className="section-kicker"><span>{number} / {label}</span><span className="section-kicker-line" /></div><div className="section-intro-content"><h2>{title}</h2>{description && <p>{description}</p>}</div></div>;
 }
 
 export function TextLink({ href, children, light = false }: { href: string; children: React.ReactNode; light?: boolean }) {

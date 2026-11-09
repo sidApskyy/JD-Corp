@@ -587,7 +587,7 @@ main { padding-top: 88px; }
 .business-card:hover .card-info-arrow { background: var(--ink); color: #fff; transform: rotate(45deg); }
 
 /* Stacked overlap: sectors slide over the intro */
-.intro-section { position: sticky; top: 0; z-index: 1; }
+.intro-section { position: relative; z-index: 1; }
 .section-bridge { position: relative; z-index: 2; background: var(--white); box-shadow: 0 -22px 44px rgba(20,21,19,.1); }
 .business-section { position: relative; z-index: 2; }
 

@@ -2,13 +2,11 @@
 
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-import { motion, useReducedMotion } from "motion/react";
 import TiltedCard, { TiltedCardLayer } from "@/components/tilted-card";
 import type { Business } from "@/data/content";
 
-export function BusinessCard({ business, index = 0 }: { business: Business; index?: number }) {
-  const reduce = useReducedMotion();
-  const card = <div className="business-card">
+export function BusinessCard({ business }: { business: Business; index?: number }) {
+  return <div className="business-card">
     <div className="tilt-square">
       <TiltedCard
         imageSrc={business.image}
@@ -38,6 +36,4 @@ export function BusinessCard({ business, index = 0 }: { business: Business; inde
       <Link href={`/businesses/${business.slug}`} className="card-info-link"><span>EXPLORE SECTOR</span><span className="card-info-arrow"><ArrowUpRight size={15} /></span></Link>
     </div>
   </div>;
-  if (reduce) return card;
-  return <motion.div initial={{ opacity: 0, y: 28 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-8% 0px" }} transition={{ duration: .65, delay: index * .06, ease: [.22, 1, .36, 1] }}>{card}</motion.div>;
 }

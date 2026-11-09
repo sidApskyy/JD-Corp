@@ -4,7 +4,6 @@ import { ArrowUpRight } from "lucide-react";
 import { Hero } from "@/components/hero";
 import { ScrollStory } from "@/components/scroll-story";
 import { SectionIntro, TextLink } from "@/components/ui";
-import FadeContent from "@/components/fade-content";
 import { SectorExplorer } from "@/components/sector-explorer";
 import { GradientCarousel } from "@/components/gradient-carousel";
 import { SectorCarousel } from "@/components/sector-carousel";
@@ -15,17 +14,17 @@ export default function Home() {
   return <>
     <Hero />
     <div className="pair-stack">
-    <section className="intro-section section-pad container">
-      <div className="intro-bg" aria-hidden="true"><Image src="/images/Cityscape on Walnut Grain.png" alt="" fill sizes="(max-width: 800px) 100vw, 90vw" className="intro-bg-img" /></div>
-      <div className="intro-marker"><span className="eyebrow">01 / OUR PERSPECTIVE</span><span className="thin-cross">+</span></div>
-      <FadeContent className="intro-body" effect="mist" duration={1.8} ease="power2.out" stagger={0.25} threshold={0.15}><h2>Many disciplines.<br /><em>One wider view.</em></h2><div className="intro-support"><p>Land, buildings, capital and trade do not exist in isolation. JD CORP looks at how connected thinking can shape better possibilities across the built world.</p><TextLink href="/about">DISCOVER OUR PERSPECTIVE</TextLink></div></FadeContent>
-      <div className="intro-rule"><span>PLACES</span><span>SYSTEMS</span><span>PROGRESS</span></div>
+    <section className="intro-section section-pad">
+      <div className="intro-bg" aria-hidden="true"><Image src="/images/Cityscape on Walnut Grain.png" alt="" fill sizes="100vw" priority className="intro-bg-img" /></div>
+      <div className="container">
+        <div className="intro-marker"><span className="eyebrow">01 / OUR PERSPECTIVE</span><span className="thin-cross">+</span></div>
+        <div className="intro-body"><h2>Many disciplines.<br /><em>One wider view.</em></h2><div className="intro-support"><p>Land, buildings, capital and trade do not exist in isolation. JD CORP looks at how connected thinking can shape better possibilities across the built world.</p><TextLink href="/about">DISCOVER OUR PERSPECTIVE</TextLink></div></div>
+        <div className="intro-rule"><span>PLACES</span><span>SYSTEMS</span><span>PROGRESS</span></div>
+      </div>
     </section>
     <section className="business-section section-pad" id="businesses"><div className="container"><SectionIntro number="02" label="SECTORS IN FOCUS" title={<>A world of work.<br /><em>Connected by purpose.</em></>} description="Explore the sectors shaping our perspective, from the places we build to the systems that make them possible." />
-      <FadeContent effect="mist" duration={1.4} stagger={0.15} threshold={0.15}>
       <p className="preview-notice">The photos are illustrative; they do not show JD CORP work.</p>
       <SectorExplorer businesses={businesses} />
-      </FadeContent>
       <div className="section-end"><span>GO DEEPER INTO EACH SECTOR</span><TextLink href="/businesses">EXPLORE ALL SECTORS</TextLink></div></div>
     </section>
     </div>
@@ -39,8 +38,8 @@ export default function Home() {
       <div className="approach-grid"><div className="approach-lead"><p>Big ambitions need clear thinking. We believe in connecting perspective with practical action, and keeping the long view in sight at every step.</p><TextLink href="/services">EXPLORE OUR APPROACH</TextLink></div><div className="approach-list"><div><span>01 / CLARITY</span><h3>Start with the right questions.</h3><p>Understanding context, priorities and possibilities before moving forward.</p></div><div><span>02 / INTENTION</span><h3>Make every decision count.</h3><p>Bringing focus and care to the choices that shape an outcome.</p></div><div><span>03 / CONTINUITY</span><h3>Think beyond the immediate.</h3><p>Looking for value that lasts beyond the first milestone.</p></div></div></div></div></section>
     <ScrollStory />
     <section className="values-section section-pad"><div className="values-bg" aria-hidden="true"><Image src="/images/material-walnut-ribbed.jpg" alt="" fill sizes="100vw" className="values-bg-img" /></div><div className="container"><SectionIntro number="06" label="WHAT MATTERS" title={<>Built around<br /><em>what matters.</em></>} description="Principles to guide thoughtful decisions, responsible growth and lasting relationships." />
-      <FadeContent className="values-grid" effect="focus" duration={1} stagger={0.12}><div><span className="value-no">01 /</span><h3>Quality as a mindset.</h3><p>Attention to detail is not an afterthought. It shapes the way we think about every opportunity.</p></div><div><span className="value-no">02 /</span><h3>Responsibility in action.</h3><p>A long-term outlook asks us to consider people, places and the consequences of our choices.</p></div><div><span className="value-no">03 /</span><h3>Progress through ideas.</h3><p>We stay open to better ways of thinking, working and creating value together.</p></div></FadeContent><TextLink href="/sustainability">OUR RESPONSIBILITY</TextLink></div></section>
-    <section className="insight-teaser" id="insight-teaser"><Image src="/images/Golden  Waterfront Skyline.png" alt="" fill sizes="100vw" className="insight-teaser-bg" /><div className="insight-teaser-copy"><FadeContent effect="develop" duration={1.3}><span className="eyebrow">07 / PERSPECTIVES & PROGRESS</span><h2>Always looking<br /><em>forward.</em></h2><p>Ideas, observations and announcements from JD CORP will find a home here as they become available.</p><Link href="/insights" className="button-dark">EXPLORE INSIGHTS <ArrowUpRight size={17} /></Link><span className="insight-teaser-credit">ILLUSTRATIVE ARCHITECTURAL STUDY</span></FadeContent></div></section>
+      <div className="values-grid"><div><span className="value-no">01 /</span><h3>Quality as a mindset.</h3><p>Attention to detail is not an afterthought. It shapes the way we think about every opportunity.</p></div><div><span className="value-no">02 /</span><h3>Responsibility in action.</h3><p>A long-term outlook asks us to consider people, places and the consequences of our choices.</p></div><div><span className="value-no">03 /</span><h3>Progress through ideas.</h3><p>We stay open to better ways of thinking, working and creating value together.</p></div></div><TextLink href="/sustainability">OUR RESPONSIBILITY</TextLink></div></section>
+    <section className="insight-teaser" id="insight-teaser"><Image src="/images/Golden  Waterfront Skyline.png" alt="" fill sizes="100vw" className="insight-teaser-bg" /><div className="insight-teaser-copy"><span className="eyebrow">07 / PERSPECTIVES & PROGRESS</span><h2>Always looking<br /><em>forward.</em></h2><p>Ideas, observations and announcements from JD CORP will find a home here as they become available.</p><Link href="/insights" className="button-dark">EXPLORE INSIGHTS <ArrowUpRight size={17} /></Link><span className="insight-teaser-credit">ILLUSTRATIVE ARCHITECTURAL STUDY</span></div></section>
     <section className="contact-band"><div className="container"><div><span className="eyebrow">THE CONVERSATION STARTS HERE</span><h2>Let&apos;s make the next<br /><em>move meaningful.</em></h2></div><div><p>Have a project, opportunity, or idea to discuss? Start a conversation with JD CORP.</p><Link href="/contact" className="circle-arrow" aria-label="Get in touch"><ArrowUpRight size={35} strokeWidth={1.2} /></Link></div></div></section>
   </>;
 }

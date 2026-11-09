@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Manrope, Instrument_Serif } from "next/font/google";
 import { Header } from "@/components/header";
 import { ScrollProgress } from "@/components/motion-ui";
+import { AmbientSpotlight } from "@/components/ambient-spotlight";
 import { Footer } from "@/components/footer";
 import { site } from "@/data/site";
 import "./globals.css";
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
   title: { default: "JD CORP — Business Beyond Boundaries", template: "%s | JD CORP" },
   description: site.description,
   alternates: { canonical: "/" },
-  openGraph: { title: "JD CORP — Business Beyond Boundaries", description: site.description, siteName: site.name, type: "website", images: ["/images/WhatsApp Image 2026-10-30 at 10.29.18 PM.jpeg"] },
+  openGraph: { title: "JD CORP — Business Beyond Boundaries", description: site.description, siteName: site.name, type: "website", images: ["/images/hero-walnut-wall.jpg"] },
   twitter: { card: "summary_large_image" },
 };
 
@@ -25,6 +26,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body>
         <a className="skip-link" href="#main">Skip to content</a>
         <ScrollProgress />
+        <AmbientSpotlight />
         <Header />
         <main id="main">{children}</main>
         <Footer />
