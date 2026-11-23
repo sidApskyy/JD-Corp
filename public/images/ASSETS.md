@@ -65,3 +65,9 @@ The `material-*.jpg` files are locally generated decorative surfaces used across
 ## Executive office derivatives
 
 The `office-*.jpg` files are locally generated crops and grades from the client-supplied JD CORP office photograph. The office shelving detail remains on the About page; the other crops are retained as source derivatives but no longer repeated across the site. The homepage hero instead uses the separate client-supplied feature-wall photograph.
+
+## Interactive 3D (added November 2026)
+
+- The site model and the globe are drawn in code with three.js; they use no image or model files.
+- `src/data/land-dots.ts` holds land sample points derived from the NASA-based `earth_specular_2048.jpg` texture in the three.js examples (MIT repository, public-domain source imagery).
+- The globe lanes and points are illustrative and are labelled as such on the page. They are not JD CORP locations or routes.

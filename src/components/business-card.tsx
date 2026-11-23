@@ -33,7 +33,7 @@ export function BusinessCard({ business }: { business: Business; index?: number 
     <div className="card-info">
       <div className="card-info-top"><span>{business.group.toUpperCase()}</span><span>N° {business.index}</span></div>
       <p>{business.description}</p>
-      <Link href={`/businesses/${business.slug}`} className="card-info-link"><span>EXPLORE SECTOR</span><span className="card-info-arrow"><ArrowUpRight size={15} /></span></Link>
+      <Link href={`/businesses/${business.slug}`} className="card-info-link"><span>VIEW BUSINESS</span><span className="card-info-arrow"><ArrowUpRight size={15} /></span></Link>
     </div>
   </div>;
 }

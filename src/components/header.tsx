@@ -8,18 +8,45 @@ import StarBorder from "@/components/star-border";
 import { navigation } from "@/data/site";
 
 const explore = [
-  { number: "01", label: "Sectors in focus", href: "/businesses", note: "Across places, resources and industry" },
-  { number: "02", label: "Services & approach", href: "/services", note: "From the first idea onward" },
-  { number: "03", label: "Project portfolio", href: "/projects", note: "Verified work as it becomes available" },
-  { number: "04", label: "Responsibility", href: "/sustainability", note: "Built around what matters" },
+  { number: "01", label: "The seven businesses", href: "/businesses", note: "From the first plot to the final guest" },
+  { number: "02", label: "How we engage", href: "/services", note: "Four stages, in order" },
+  { number: "03", label: "Projects", href: "/projects", note: "Published as each one is verified" },
+  { number: "04", label: "Responsibility", href: "/sustainability", note: "Build as if you will keep it" },
 ];
 
 export function Header() {
   const [open, setOpen] = useState(false);
+  const [hidden, setHidden] = useState(false);
+  const lastScrollY = useRef(0);
   const pathname = usePathname();
   const panelRef = useRef<HTMLDivElement>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
   const mobileButtonRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    const onScroll = () => {
+      const currentY = window.scrollY;
+      if (open) {
+        setHidden(false);
+        lastScrollY.current = currentY;
+        return;
+      }
+      if (currentY <= 60) {
+        setHidden(false);
+        lastScrollY.current = currentY;
+        return;
+      }
+      if (currentY > lastScrollY.current + 8) {
+        setHidden(true);
+      } else if (currentY < lastScrollY.current - 8) {
+        setHidden(false);
+      }
+      lastScrollY.current = currentY;
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [open]);
 
   useEffect(() => {
     if (!open) return;
@@ -41,7 +68,7 @@ export function Header() {
   }, [open]);
 
   return (
-    <header className="site-header">
+    <header className={`site-header ${hidden ? "is-hidden" : ""}`}>
       <div className="header-inner">
         <Link href="/" className="wordmark" aria-label="JD CORP home" onClick={() => setOpen(false)}><img src="/images/logo.png" alt="JD CORP" className="wordmark-logo" /></Link>
         <nav className="desktop-nav" aria-label="Primary navigation">
@@ -55,12 +82,12 @@ export function Header() {
       </div>
       <div id="navigation-canvas" ref={panelRef} className={`nav-canvas ${open ? "is-open" : ""}`} inert={!open}>
         <div className="nav-canvas-inner container">
-          <div className="nav-canvas-side"><span className="eyebrow">JD CORP / DIRECTORY</span><p>Across the fields<br />that shape tomorrow<span className="serif-period">.</span></p><span className="nav-canvas-caption">One perspective. Many disciplines.</span></div>
+          <div className="nav-canvas-side"><span className="eyebrow">JD CORP / DIRECTORY</span><p>Land to landmark,<br />under one roof<span className="serif-period">.</span></p><span className="nav-canvas-caption">Seven businesses. One group.</span></div>
           <nav aria-label="Explore website" className="nav-canvas-links">
             {explore.map((item) => <Link href={item.href} key={item.href} onClick={() => setOpen(false)}><span className="nav-number">{item.number}</span><span>{item.label}<small>{item.note}</small></span><ArrowUpRight size={24} strokeWidth={1} /></Link>)}
           </nav>
-          <div className="mobile-extra"><Link href="/about" onClick={() => setOpen(false)}>About</Link><Link href="/insights" onClick={() => setOpen(false)}>Insights</Link><Link href="/careers" onClick={() => setOpen(false)}>Careers</Link><Link href="/contact" onClick={() => setOpen(false)}>Contact</Link></div>
-          <div className="nav-canvas-bottom"><span>BUILDING WITH PURPOSE</span><Link href="/contact" onClick={() => setOpen(false)}>Start a conversation <ArrowUpRight size={14} /></Link></div>
+          <div className="mobile-extra"><Link href="/about" onClick={() => setOpen(false)}>About</Link><Link href="/insights" onClick={() => setOpen(false)}>Journal</Link><Link href="/careers" onClick={() => setOpen(false)}>Careers</Link><Link href="/contact" onClick={() => setOpen(false)}>Contact</Link></div>
+          <div className="nav-canvas-bottom"><span>BUSINESS BEYOND BOUNDARIES</span><Link href="/contact" onClick={() => setOpen(false)}>Start a conversation <ArrowUpRight size={14} /></Link></div>
         </div>
       </div>
     </header>

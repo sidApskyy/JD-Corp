@@ -15,20 +15,20 @@ export function Hero() {
       />
       <div className="hero-light-shimmer" aria-hidden="true" />
       <div className="hero-static-copy">
-        <span className="eyebrow hero-eyebrow-reveal">A DIVERSIFIED CORPORATE GROUP</span>
+        <span className="eyebrow hero-eyebrow-reveal">SEVEN BUSINESSES. ONE GROUP.</span>
         <h1 className="hero-title-reveal">
-          <span className="hero-line-inner">Building</span>
-          <span className="hero-line-inner"><em>What&apos;s Next.</em></span>
+          <span className="hero-line-inner">Land to</span>
+          <span className="hero-line-inner"><em>landmark.</em></span>
         </h1>
         <p className="hero-desc-reveal">
-          At JD Corporation, we seek opportunities to bring ideas, capabilities, and people together to create lasting value.
+          Land, real estate, construction, investment, trade, hospitality and marketing: seven businesses that work as one, so the ground we secure becomes the place people arrive at.
         </p>
         <div className="hero-actions hero-actions-reveal">
-          <Link className="button-dark hero-btn-gold" href="/businesses">
-            <span>EXPLORE OUR BUSINESSES</span> <ArrowUpRight size={17} />
+          <Link className="button-dark hero-btn-gold" href="/#model">
+            <span>SEE HOW IT CONNECTS</span> <ArrowUpRight size={17} />
           </Link>
           <Link className="button-line light hero-secondary" href="/contact">
-            <span>LET&apos;S CONNECT</span> <ArrowUpRight size={17} />
+            <span>START A CONVERSATION</span> <ArrowUpRight size={17} />
           </Link>
         </div>
       </div>
