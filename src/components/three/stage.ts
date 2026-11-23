@@ -102,6 +102,19 @@ export function createStage(THREE: typeof Three, host: HTMLElement, options: Sta
   window.addEventListener("pointermove", onMove, { passive: true });
   window.addEventListener("pointerup", onUp);
 
+  // Where the stage sits on the page: the camera breathes as the page scrolls.
+  const scroll = { t: 0 };
+  const onScroll = () => {
+    const rect = host.getBoundingClientRect();
+    const span = window.innerHeight / 2 + rect.height / 2;
+    if (span <= 0) return;
+    scroll.t = Math.min(1, Math.max(-1, (rect.top + rect.height / 2 - window.innerHeight / 2) / span));
+  };
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+  // Smoothed pointer parallax: the camera leans gently toward the cursor.
+  const drift = { x: 0, y: 0 };
+
   const ray = new THREE.Raycaster();
   const pick = (objects: Three.Object3D[]) => {
     if (!pointer.inside) return null;
@@ -136,8 +149,15 @@ export function createStage(THREE: typeof Three, host: HTMLElement, options: Sta
     time += dt;
     rig.idle += dt;
     if (!pointer.down && !reduce && rig.idle > 2.5) rig.az += dt * (options.autoRotate ?? 0.12);
-    const r = rig.radius * radiusScale;
-    camera.position.set(target.x + r * Math.sin(rig.pol) * Math.sin(rig.az), target.y + r * Math.cos(rig.pol), target.z + r * Math.sin(rig.pol) * Math.cos(rig.az));
+    const easeF = 1 - Math.exp(-dt * 3.4);
+    const px = pointer.inside && !pointer.down ? pointer.x : 0;
+    const py = pointer.inside && !pointer.down ? pointer.y : 0;
+    drift.x += (px * 0.16 - drift.x) * easeF;
+    drift.y += (py * 0.07 - drift.y) * easeF;
+    const az = rig.az + drift.x + scroll.t * 0.05;
+    const pol = Math.min(1.4, Math.max(0.5, rig.pol - drift.y));
+    const r = rig.radius * radiusScale * (1 + scroll.t * 0.05);
+    camera.position.set(target.x + r * Math.sin(pol) * Math.sin(az), target.y + r * Math.cos(pol) - scroll.t * 0.3, target.z + r * Math.sin(pol) * Math.cos(az));
     camera.lookAt(target);
     frames.forEach((fn) => fn(dt, reduce ? 0 : time));
     renderer.render(scene, camera);
@@ -158,6 +178,7 @@ export function createStage(THREE: typeof Three, host: HTMLElement, options: Sta
       canvas.removeEventListener("pointerleave", onLeave);
       window.removeEventListener("pointermove", onMove);
       window.removeEventListener("pointerup", onUp);
+      window.removeEventListener("scroll", onScroll);
       disposables.forEach((item) => item.dispose());
       renderer.dispose();
       canvas.remove();
